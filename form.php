@@ -1,13 +1,27 @@
 <?php  
 
 if(isset($_POST['submit'])){
+	$minimum = 5;
+	$maximum = 10;
 	echo "Info submited";
 	$username = $_POST['username'];
 	
 	$password = $_POST['password'];
+	echo "<br>";
 	
-	echo "Hello User" . $username; 
-	echo " Your Password is: " . $password;
+	echo "Hello User : " . $username; 
+	echo "<br>";
+	echo " Your Password is : " . $password;
+	echo "<br>";
+	if(strlen($username) < $minimum){
+		echo "User Name has to be longer than 5 Chartr";
+	}
+	
+	echo "<br>";
+	
+	if(strlen($password) < $maximum){
+		echo "Password can not be longer than 10 charecter";
+	}
 }
 
 ?>

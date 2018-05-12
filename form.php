@@ -1,6 +1,7 @@
 <?php  
 
 if(isset($_POST['submit'])){
+	$name = array("Edwin", "Shafiq", "Peter", "Habibi");
 	$minimum = 5;
 	$maximum = 10;
 	echo "Info submited";
@@ -21,6 +22,12 @@ if(isset($_POST['submit'])){
 	
 	if(strlen($password) < $maximum){
 		echo "Password can not be longer than 10 charecter";
+	}
+	
+	if(!in_array($username, $name)){
+		echo " Sorry You are not allowed..!!";
+	}else{
+		echo " Welcome..!!";
 	}
 }
 

@@ -3,7 +3,7 @@
 	
 	if(!$connection){
 		
-		die("Coneection failed");
+		die("Connection failed");
 	}
 	
 
